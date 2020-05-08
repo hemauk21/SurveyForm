@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meetup Survey Form
+    </title>
+    <link href="style.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1 id="title">Meetup Survey Form</h1>
+    <p id="description">
+        -an opportunity to connect with like minded people...
+    </p>
+
+    <form id="survey-form">
+        <div id="main">
+            <fieldset>
+
+                <div id="form-element-div">
+                    <p>
+                        <label id="name-label">Name</label>
+                    </p>
+                    <input type="text" id="name" class="form-style" placeholder="Full Name" maxlength="25" required>
+
+                </div>
+                <div id="form-element-div">
+                    <p>
+                        <label id="email-label">Email</label>
+                    </p>
+                    <input type="email" id="email" class="form-style" placeholder="Registered Email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+                </div>
+                <div id="form-element-div">
+                    <p>
+                        <label id="number-label">Age</label>
+                    </p>
+                    <input type="number" id="number"  class="form-style" placeholder="Must be above 18" min="18" max="70">
+                </div>
+                <div id="form-element-div">
+                    <p>
+                        <label id="career-background-label">Choose your career background</label>
+                    </p>
+                    <select id="dropdown"  class="form-style">
+                        <option value="">--please choose an option--</option>
+                        <option value="I">Information Technology</option>
+                        <option value="E">Education & Training</option>
+                        <option value="F">Finance</option>
+                        <option value="H">Hospitality</option>
+                        <option value="M">Marketing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <p>
+                        <label>Gender</label>
+                    </p>
+
+                    <input type="radio" value="male" name="gender">
+                    <label>Male</label>
+
+                    <input type="radio" value="female" name="gender">
+                    <label>Female</label>
+
+                    <input type="radio" value="other" name="gender">
+                    <label>Other</label>
+
+
+                </div>
+                <div>
+                    <p>
+                        <label>What type of session would make you comfortable?(Check all that apply)</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" value="offline" name="sessionType">
+                        <label>Offline Session</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" value="recorded" name="sessionType">
+                        <label>Recorded Online Session</label>
+                    </p>
+                    <p>
+                    <input type="checkbox" value="live" name="sessionType">
+                    <label>Live Session</label>
+                     </p>
+                   <p>
+                    <input type="checkbox" value="live" name="sessionType">
+                    <label>Full Day Session</label>
+                </p>
+                <p>
+                    <input type="checkbox" value="live" name="sessionType">
+                    <label>Half Day Session</label>
+                </p>
+                </div>
+                <div>
+                    <p>
+                        <label id="experience-label">Rate your experience in Information Technology</label>
+                      
+                    </p>
+                    <p>
+                    <input type="range" id="experience-slider" min="0" max="10" value="0"
+                        oninput="document.getElementById('experienceVal').innerHTML=this.value" />
+                        <label id="experienceVal">0</label> Years
+                    </p>
+
+
+                </div>
+                <div id="form-element-div">
+                    <label>Any questions or suggestions?</label>
+                    <textarea rows="5" cols="40"  class="form-style">
+
+                </textarea>
+
+                <div id="form-element-div">
+                    <p>
+                <button type="submit" id="submit" value="submit">Submit</button>
+                <button type="reset" id="reset" value="reset">Reset</button>
+            </p>
+                </div>
+
+                </div>
+
+             </fieldset>
+        </div>
+
+    </form>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+
+</html>
